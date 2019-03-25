@@ -1,7 +1,5 @@
 environment:  
   matrix:
-  - APPVEYOR_BUILD_ARTIFACT_STORAGE: gce-artifacts-us
-  - APPVEYOR_BUILD_ARTIFACT_STORAGE: gce-artifacts-us
   - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus-v2
   - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus-v2
   - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus
