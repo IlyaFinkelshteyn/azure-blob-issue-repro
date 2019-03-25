@@ -10,6 +10,7 @@ environment:
   - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus
 install:
 - ps: |
+    Write-host "My IP: $((Invoke-WebRequest https://api.ipify.org).content)" -ForegroundColor Yellow
     Start-FileDownload https://ci.appveyor.com/api/buildjobs/e5d5c3mmrucxq3tm/artifacts/exokit-win-x64.exe
     Start-FileDownload https://ci.appveyor.com/api/buildjobs/e5d5c3mmrucxq3tm/artifacts/exokit-windows-full.zip
     Start-FileDownload https://ci.appveyor.com/api/buildjobs/e5d5c3mmrucxq3tm/artifacts/exokit-windows.zip
