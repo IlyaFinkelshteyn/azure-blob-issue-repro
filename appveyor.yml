@@ -1,3 +1,7 @@
+image:
+- Visual Studio 2017
+- Visual Studio 2019 Preview
+- Windows Server 2019
 environment:  
   matrix:
   - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus-v2
