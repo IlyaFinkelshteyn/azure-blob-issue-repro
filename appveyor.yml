@@ -1,0 +1,19 @@
+environment:  
+  matrix:
+  - APPVEYOR_BUILD_ARTIFACT_STORAGE: gce-artifacts-us
+  - APPVEYOR_BUILD_ARTIFACT_STORAGE: gce-artifacts-us
+  - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus-v2
+  - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus-v2
+  - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus
+  - APPVEYOR_BUILD_ARTIFACT_STORAGE: azure-artifacts-westus
+install:
+- ps: |
+    Start-FileDownload https://ci.appveyor.com/api/buildjobs/e5d5c3mmrucxq3tm/artifacts/exokit-win-x64.exe
+    Start-FileDownload https://ci.appveyor.com/api/buildjobs/e5d5c3mmrucxq3tm/artifacts/exokit-windows-full.zip
+    Start-FileDownload https://ci.appveyor.com/api/buildjobs/e5d5c3mmrucxq3tm/artifacts/exokit-windows.zip
+build: off
+test: off
+artifacts:
+- path: exokit-win-x64.exe
+- path: exokit-windows-full.zip
+- path: exokit-windows.zip
